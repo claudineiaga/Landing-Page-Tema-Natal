@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Emilys+Candy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap');
+body{
+	margin: 0;
+	padding: 0;
+}
+*{
+	box-sizing: border-box;
+}
+.section{
+	background-color: #b01010;
+	font-family: 'Emilys Candy', cursive;
+	padding: 0 15px 30px 15px;
+}
+.content{
+	display: flex;
+	flex-wrap: wrap;
+}
+.main-container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.circle-column {
+	align-items: flex-end;
+	display: flex;
+	flex: 0 0 25%;
+	height: 260px;
+	max-width: 25%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+	padding: 0 5px;
+}
+.circle-column::before {
+	background-color: red;
+	content: "";
+	height: 100%;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 2px;
+	z-index: -1;
+}
+.circle-column .circle {
+	align-items: center;
+	border-radius: 50%;
+	display: flex;
+	font-size: 66px;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 180px;
+	font-weight: bold;
+}
+.circle-column .circle span{
+	display: block;
+	text-transform: capitalize;
+	font-weight: normal;
+	font-size: 22px;
+}
+.circle-column .circle::before {
+	background-color: #c03636;
+	border-radius: 45%;
+	border: 2px solid #f99d24;
+	content: "";
+	height: 15px;
+	left: -1px;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	top: -19px;
+	width: 5px;
+}
+.circle-column .circle::after {
+	content: "";
+	padding-top: 100%;
+}
+.circle-column .circle.blue {
+	background-color: #1624e4;
+}
+.circle-column .circle.yellow {
+	background-color:#f7f30a;
+}
+.circle-column .circle.green {
+	background-color: #0acf0a;
+}
+.circle-column .circle.white {
+	background-color: #ffffff;
+}
+.intro{
+	color: #ffffff;
+	text-align: center;
+}
+.intro h1{
+	font-size: 90px;
+	margin: 40px 0 0 0;
+}
+.intro h3 {
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 45px;
+	margin: 0;
+	text-transform: uppercase;
+}
+.shop-btn {
+	border-radius: 3px;
+	border: 2px dashed #ffffff;
+	color: #ffffff;
+	display: inline-block;
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 34px;
+	font-weight: bold;
+	margin-top: 30px;
+	min-width: 200px;
+	padding: 4px 10px;
+	text-decoration: none;
+}
+.shop-btn:hover,
+.shop-btn:focus{
+	outline: 0;
+	text-decoration: none;
+	background-color: #0b290b;
+}
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+.bounce {
+	  animation-name: bounce;
+	  transform-origin: center bottom;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;
+}
+@media screen and (max-width: 767px) {
+	.circle-column .circle {
+		font-size: 26px;
+	}
+	.intro h1 {
+		font-size: 54px;
+	}
+	.circle-column .circle span{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.circle-column .circle {
+		font-size: 20px;
+	}
+	.intro h1 {
+		font-size: 40px;
+	}
+	.circle-column .circle span{
+		font-size: 10px;
+	}
+}
